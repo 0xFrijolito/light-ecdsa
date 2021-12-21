@@ -2,6 +2,8 @@
 
 Minimalist and lightweight implementation of ecdsa in python
 
+## usage
+
 ```python
 from ecdsa import sign, verify, PrivateKey
 
