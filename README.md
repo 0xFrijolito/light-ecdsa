@@ -21,3 +21,8 @@ def main ():
 if __name__ == "__main__":
     main()
 ```
+
+```bash
+frijolito@notebook12gb:~/projects/light-ecdsa$ python3 test.py
+True
+```
