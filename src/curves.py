@@ -1,9 +1,6 @@
-from ecdsa.point import Point, INF_POINT
+from .point import Point, INF_POINT
 
-import matplotlib.pyplot as plt
-import numpy as np
 import math
-
 
 # Helper functions 
 def reduce_mod(x:int, p:int) -> int:
@@ -75,12 +72,6 @@ class Curve:
     
     def contain (self:object, p:object) -> bool:
         return equal_mod(p.y**2, p.x**3 + self.a * p.x + self.b, self.p)
-
-    def plot(self):
-        y, x = np.ogrid[-10:10:100j, -10:10:100j]
-        plt.title(self.name)
-        plt.contour(x.ravel(), y.ravel(), pow(y, 2) - pow(x, 3) - x * self.a - self.b, [0])
-
 
 secp256k1 = Curve(
     "secp256k1", 

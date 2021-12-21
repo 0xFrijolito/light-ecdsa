@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-
 INF_POINT = None
 
 class Point:
@@ -7,8 +5,5 @@ class Point:
         self.x = x
         self.y = y
     
-    def plot(self) -> None:
-        plt.plot(self.x, self.y, "o")
-
     def __str__(self) -> str:
         return f"({self.x}, {self.y})"
