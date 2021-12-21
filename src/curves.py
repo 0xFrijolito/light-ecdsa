@@ -1,4 +1,4 @@
-from .point import Point, INF_POINT
+from point import Point, INF_POINT
 
 import math
 

@@ -1,7 +1,7 @@
-from .point import INF_POINT
-from .private_key import PrivateKey
-from .curves import reduce_mod, inverse_mod
-from .signature import Signature
+from point import INF_POINT
+from private_key import PrivateKey
+from curves import reduce_mod, inverse_mod
+from signature import Signature
 
 from hashlib import sha256
 from random import randint

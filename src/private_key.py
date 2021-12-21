@@ -1,5 +1,5 @@
-from .curves import secp256k1
-from .public_key import PublicKey
+from curves import secp256k1
+from public_key import PublicKey
 
 from random import randint
 
