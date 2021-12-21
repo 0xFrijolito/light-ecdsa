@@ -4,6 +4,8 @@ Minimalist and lightweight implementation of ecdsa in python
 
 ## usage
 
+Basic private and public key generation and sign a message
+
 ```python
 from ecdsa import sign, verify, PrivateKey
 
