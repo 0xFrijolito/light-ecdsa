@@ -1,6 +1,8 @@
 from curves import secp256k1
 from public_key import PublicKey
 
+from utils import File
+
 from random import randint
 
 class PrivateKey():
@@ -13,6 +15,10 @@ class PrivateKey():
         public_key = PublicKey(public_key_point, self.curve)
 
         return public_key
+
+    def load_from_pem_file(self, path:str):
+        pem_file_data = File.read(path)
+        pem = None # base64.decode(pem_file.split("\n")[0])
 
     def to_string(self) -> str:
         pass

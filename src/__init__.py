@@ -12,9 +12,8 @@ ERROR_NOT_SAME_CURVE               = 0x0002
 ERROR_SIGNATURES_VALUES_NOT_VALID  = 0x0003
 ERROR_PRIVATE_KEY_VALUES_NOT_VALID = 0x0004
 
-
 # https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm
-def sign (private_key:object, message:bytes) -> list:
+def sign (private_key:PrivateKey, message:bytes) -> Signature:
     curve  = private_key.curve
     secret = private_key.secret
 
@@ -33,7 +32,7 @@ def sign (private_key:object, message:bytes) -> list:
     
     return Signature(r, s, r_id)
 
-def verify (public_key:object, message:bytes, signature:object) -> bool:
+def verify (public_key:PublicKey, message:bytes, signature:Signature) -> bool:
     curve = public_key.curve
     q = public_key.p
     

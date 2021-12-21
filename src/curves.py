@@ -27,7 +27,7 @@ class Curve:
         g    -> generator point
         n    -> order of G (number of points generate by scalar multiplication using the point g)
     """
-    def __init__(self, name:str, a:int, b:int, p:int, g:object, n:int) -> None:
+    def __init__(self, name:str, a:int, b:int, p:int, g:Point, n:int) -> None:
         self.name = name
         self.a = a
         self.b = b
@@ -36,7 +36,7 @@ class Curve:
         self.n = n
 
     # https://es.wikipedia.org/wiki/Criptograf%C3%ADa_de_curva_el%C3%ADptica
-    def add(self:object, p1:object, p2:object) -> object:
+    def add(self, p1:Point, p2:Point) -> Point:
         if p1 == INF_POINT:
             return p2
         if p2 == INF_POINT:
@@ -61,7 +61,7 @@ class Curve:
         return Point(x3, y3)
 
     # https://www.youtube.com/watch?v=u1VRbo_fhC8 | double-and-Add
-    def scalar_multiplication (self:object, k:int, p:object) -> object:
+    def scalar_multiplication (self:object, k:int, p:Point) -> Point:
         q = INF_POINT
         while k != 0:
             if k & 1 != 0:
@@ -70,7 +70,7 @@ class Curve:
             k >>= 1
         return q
     
-    def contain (self:object, p:object) -> bool:
+    def contain (self, p:Point) -> bool:
         return equal_mod(p.y**2, p.x**3 + self.a * p.x + self.b, self.p)
 
 secp256k1 = Curve(
