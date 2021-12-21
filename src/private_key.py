@@ -14,5 +14,11 @@ class PrivateKey():
 
         return public_key
 
+    def to_string(self) -> str:
+        pass
+
+    def to_pem(self) -> str:
+        pass
+
     def __str__(self):
         return f"curve:  {self.curve.name}\nsecret: {hex(self.secret)}"
