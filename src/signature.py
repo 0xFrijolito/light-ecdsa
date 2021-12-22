@@ -5,4 +5,4 @@ class Signature:
         self.r_id = r_id
 
     def __str__(self:object) -> str:
-        return f"r: {hex(self.r)} \ns: {hex(self.s)}\nr_id: {hex(self.r_id)}"
+        return f"r: {self.r} \ns: {self.s}\nr_id: {self.r_id}"

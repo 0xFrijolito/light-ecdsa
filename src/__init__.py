@@ -1,4 +1,5 @@
 from point import INF_POINT
+from public_key import PublicKey
 from private_key import PrivateKey
 from curves import reduce_mod, inverse_mod
 from signature import Signature
