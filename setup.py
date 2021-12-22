@@ -5,7 +5,7 @@ DESCRIPTION = "Minimalistic ecdsa"
 
 setup(
     name="light-ecdsa",
-    version=Version,
+    version=VERSION,
     author="0xFrijolito",
     author_email="<dante_torobolino@protonmail.com>",
     description=DESCRIPTION,

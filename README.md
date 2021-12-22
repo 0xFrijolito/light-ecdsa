@@ -1,8 +1,8 @@
-# Light ECDSA
+## Light ECDSA
 
 Minimalist and lightweight implementation of ecdsa in python
 
-## usage
+### usage
 
 Basic private and public key generation and sign a message
 
