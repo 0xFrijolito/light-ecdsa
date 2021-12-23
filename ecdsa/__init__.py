@@ -1,8 +1,8 @@
-from point import INF_POINT
-from public_key import PublicKey
-from private_key import PrivateKey
-from curves import reduce_mod, inverse_mod
-from signature import Signature
+from ecdsa.point import INF_POINT
+from ecdsa.public_key import PublicKey
+from ecdsa.private_key import PrivateKey
+from ecdsa.curves import reduce_mod, inverse_mod
+from ecdsa.signature import Signature
 
 from hashlib import sha256
 from random import randint

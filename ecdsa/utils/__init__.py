@@ -1,2 +1,2 @@
-from utils.file import File
-from utils.converter import Converter
+from ecdsa.utils.file import File
+from ecdsa.utils.converter import Converter

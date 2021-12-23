@@ -1,7 +1,7 @@
-from curves import secp256k1
-from public_key import PublicKey
+from ecdsa.curves import secp256k1
+from ecdsa.public_key import PublicKey
 
-from utils import File
+from ecdsa.utils import File
 
 from random import randint
 

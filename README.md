@@ -2,6 +2,12 @@
 
 Minimalist and lightweight implementation of ecdsa in python
 
+### Installation
+Run this command in the terminal:
+```bash
+pip install light-ecdsa
+```
+
 ### usage
 
 Basic private and public key generation and sign a message
