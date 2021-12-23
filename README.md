@@ -8,7 +8,7 @@ Run this command in the terminal:
 pip install light-ecdsa
 ```
 
-### usage
+### Code Examples
 
 Basic private and public key generation and sign a message
 
@@ -26,9 +26,4 @@ def main ():
     
 if __name__ == "__main__":
     main()
-```
-
-```bash
-frijolito@notebook12gb:~/projects/light-ecdsa$ python3 test.py
-True
 ```
