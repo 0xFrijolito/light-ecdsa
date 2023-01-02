@@ -21,8 +21,8 @@ def main ():
     message = b"hello world"
     
     signature = sign(private_key, message)
-    valid = verify(public_key, message, signature)
-    print(valid)
+    is_valid = verify(public_key, message, signature)
+    print(is_valid) # True   
     
 if __name__ == "__main__":
     main()
